@@ -2,31 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>Sign Up</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twatter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link href="style/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <h1>PigeonDM</h1>
-        <!--Link to the bootstrap styles-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </header>
-    <section>
-        <h2>Sign up</h2>
-        <article>
-            <h2>Before you get started</h2>
-            <!--Start of the form-->
-            <form>
-                <fieldset class="border">
-                    <legend class="w-auto">Tell us about yourself!</legend>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Sidebar-->
+            <div class="col-md-2 col-lg-1 px-1 sidebarbox position-fixed" id="sticky-sidebar">
+                <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
+                    <button class="btn">Home</button>
+                    <button class="btn">Profile</button>
+                    <button class="btn">Messages</button>
+                </div>
+            </div>
+            <div class="col-9 offset-2" id="main">
+                <form class="signupform">
+                    <h1>Signup</h1>
                     <!--Name information-->
                     <div class="row form-group">
-                        <label for="txtFirstName" class="col-sm-2 col-form-label">First Name:</label>
+                        <label for="txtFirstName" class="col-sm-3 col-md-2 col-lg-2 col-form-label">First Name</label>
                         <div class="col-md-10 col-lg-4">
                             <input required type="text" id="txtFirstName" name="txtFirstName" class="form-control">
                         </div>
-                        <label for="txtLastName" class="col-sm-2 col-form-label">Last Name:</label>
+                        <label for="txtLastName" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Last Name</label>
                         <div class="col-md-10 col-lg-4">
                             <input required type="text" id="txtLastName" name="txtLastName" class="form-control">
                         </div>
@@ -34,16 +39,16 @@
 
                     <!--Username information-->
                     <div class="row form-group">
-                        <label for="txtUsername" class="col-sm-2 col-form-label">Username:</label>
-                        <div class="col-sm-10">
+                        <label for="txtUsername" class="col-sm-3 col-md-2 col-lg-2 col-form-label">User name</label>
+                        <div class="col-lg-9 col-md-10 col-lg-10">
                             <input required type="text" id="txtUsername" name="txtUsername" class="form-control">
                         </div>
                     </div>
 
                     <!--Gender information-->
                     <div class="row">
-                        <div class="col-sm-2 col-form-label">Gender</div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-1 col-md-2 col-form-label">Gender</div>
+                        <div class="col-sm-9">
                             <div class="form-check">
                                 <input type="radio" id="rbMale" name="gender" value="male" class="form-check-label">
                                 <label for="rbMale" class="form-check-label">Male</label>
@@ -60,42 +65,43 @@
                     </div>
                     <!--Location information-->
                     <div class="row form-group">
-                        <label for="txtLocation" class="col-sm-2 col-form-label">Location:</label>
-                        <div class="col-sm-10">
+                        <label for="txtLocation" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Location</label>
+                        <div class="col-lg-9 col-md-10 col-lg-10">
                             <input type="text" id="txtLocation" name="txtLocation" class="form-control">
                         </div>
                     </div>
                     <!--Email Information-->
                     <div class="row form-group">
-                        <label for="txtEmail" class="col-sm-2 col-form-label">Email:</label>
-                        <div class="col-sm-10">
-                            <input required type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="name@example.com">
+                        <label for="txtEmail" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Email</label>
+                        <div class="col-lg-9 col-md-10 col-lg-10">
+                            <input required type="email" id="txtEmail" name="txtEmail" class="form-control"
+                                placeholder="name@example.com">
                         </div>
                     </div>
                     <!--Password information-->
                     <div class="row form-group">
-                        <label for="txtPass" class="col-sm-2 col-form-label">Password:</label>
+                        <label for="txtPass" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Password</label>
                         <div class="col-md-10 col-lg-4">
                             <input required type="password" id="txtPass" name="txtRepass" class="form-control">
                         </div>
-                        <label for="txtRepass" class="col-sm-2 col-form-label">Reenter Password:</label>
+                        <label for="txtRepass" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Reenter Password</label>
                         <div class="col-md-10 col-lg-4">
                             <input required type="password" id="txtRepass" name="txtRepass" class="form-control">
                         </div>
                     </div>
                     <!--Date of birth information-->
                     <div class="row form-group">
-                        <div class="col-sm-2">
-                            <label for="txtDob" class="col-form-label">Date of Birth:</label>
+                        <div class="col-sm-3 col-md-2 col-lg-2">
+                            <label for="txtDob" class="col-form-label">Date of Birth</label>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-lg-10 col-md-10">
                             <input required type="date" id="txtDob" name="txtDob" class="form-control">
                         </div>
                     </div>
                     <!--Security question selection-->
                     <div class="row form-group">
-                        <label for="ddSecurity" class="col-sm-2 col-form-label">Security Question</label>
-                        <div>
+                        <label for="ddSecurity" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Security Question</label>
+                        <div class="col-lg-10 col-md-10">
                             <select id="ddSecurity" name="ddSecurity" class="form-control">
                                 <option value="Option1" selected>What is the street you grew up on?</option>
                                 <option value="Option2">What is your favorite sports team?</option>
@@ -105,29 +111,32 @@
                     </div>
                     <!--Security question entry-->
                     <div class="row form-group">
-                        <label for="txtSecurity" class="col-sm-2 col-form-label">Enter your answer:</label>
-                        <div class="col-sm-10">
+                        <label for="txtSecurity" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Enter your answer</label>
+                        <div class="col-lg-10 col-md-10">
                             <input required type="text" id="txtSecurity" name="txtSecurity" class="form-control">
                         </div>
                     </div>
                     <!--Biography information-->
                     <div class="row form-group">
-                        <label for="txtBio" class="col-sm-2 col-form-label">Biography:</label>
-                        <div class="col-sm-10">
+                        <label for="txtBio" class="col-sm-3 col-md-2 col-lg-2 col-form-label">Biography</label>
+                        <div class="col-lg-10 col-md-10">
                             <input type="text" id="txtBio" name="txtBio" class="form-control">
                         </div>
                     </div>
 
-                </fieldset>
-                <p>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-secondary">Reset</button>
-                </p>
-            </form>
-            <!--End of the form-->
-        </article>
-    </section>
-    <footer>Copyright all rights reserved</footer>
+
+                    <p>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </p>
+
+                </form>
+                <footer>Copyright all rights reserved</footer>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

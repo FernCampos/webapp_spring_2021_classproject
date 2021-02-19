@@ -30,7 +30,10 @@ html,body {
 }
 
 input[type="email"],
-input[type="password"]{
+input[type="password"],
+input[type="text"],
+input[type="date"],
+#ddSecurity{
     background: White;
     border: 2px solid #1B8585;
     border-radius: 10px;
@@ -38,7 +41,8 @@ input[type="password"]{
 }
 
 input[type="email"]:focus,
-input[type="password"]:focus{
+input[type="password"]:focus,
+input[type="text"]:focus{
     border: 2px solid white;
     border-radius: 10px;
     margin-bottom: 25px;
@@ -49,6 +53,7 @@ input[type="password"]:focus{
     font-size: 14px;
     transform: translateY(10px);
     border-radius: 10px;
+    color:white;
 }
 
 .btn:hover{
@@ -62,3 +67,19 @@ input[type="password"]:focus{
     text-align: center;
     padding-top: 25px;
 }
+
+.sidebarbox{
+    background-color: teal;
+}
+
+.signupform{
+    margin:20px;
+    background-color: White;
+    border-radius: 10px;
+    align-items: center;
+    color: #1B8585;
+    padding:40px;
+    
+}
+
+
