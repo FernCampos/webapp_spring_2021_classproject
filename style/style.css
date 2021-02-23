@@ -267,3 +267,38 @@ form button{
   left: 40px;
   transition-duration: 0.5s;
 }
+
+/*Feed styles*/
+
+.feedpage{
+  border-radius: 10px;
+  border-width:2px;
+}
+
+.usertwez{
+  color:#333;
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+  align-items: center;
+}
+
+.btn-box-actions{
+  margin: 10px;
+  text-align: center;
+  align-items: right;
+}
+
+.username{
+  color:#2786CF;
+}
+
+.hashtag{
+  color:#2786CF;
+  
+}
+
+.defaultprofile{
+  width: 80px;
+  height: 80px;
+}
