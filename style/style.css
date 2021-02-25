@@ -268,14 +268,14 @@ form button{
   transition-duration: 0.5s;
 }
 
-/*Feed styles*/
+/*Feed & Profile styles*/
 
-.feedpage{
+.feedpage, .profilepage{
   border-radius: 10px;
   border-width:2px;
 }
 
-.usertwez{
+.usertwez, .profilebox{
   color:#333;
   background-color: white;
   border-radius: 10px;
